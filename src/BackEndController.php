@@ -13,7 +13,7 @@ class BackEndController
 
     private \App\Model $model;
     private \App\BackEndView $view;
-    public function __construct()
+    public function __construct($model, $view)
     {
 
         $this->model = new \App\Model();

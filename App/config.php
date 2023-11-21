@@ -39,7 +39,7 @@ return [
         ->constructor(get('OpisConnection')),
     'OpisModel'=>create(\App\OpisModel::class)
         ->constructor(get('OpisDB')),
-    'OpisFrontCntrl'=>create(\App\OpisFrontendController::class)
+    'OpisFrontCntrl'=>create(\App\OpisFrontEndController::class)
         ->constructor(get('OpisModel')),
     'PDO'=>function(){
         $opt = [
@@ -53,15 +53,15 @@ return [
     'PDOModel'=>create(\App\ModelPDO::class)
         ->constructor(get('PDO')),
 
-    Ebog\BackendController:: class=>create(\App\BackEndController::class)
+    App\BackEndController:: class=>create(\App\BackEndController::class)
         ->constructor(
             get('Model'),
             get('BackView')),
-    Ebog\PDOFrontentControler::class=>create(App\PDOFrontEntControler::class)
+    App\PDOFrontentControler::class=>create(App\PDOFrontEntControler::class)
         ->constructor(get('PDOModel')),
-    Ebog\OpisFrontendController::class=>create(App\OpisFrontEndController::class)
+    App\OpisFrontendController::class=>create(App\OpisFrontEndController::class)
         ->constructor(get('OpisModel')),
-    Ebog\FrontendController::class => create( App\FrontEndController::class)
+    App\FrontEndController::class => create( App\FrontEndController::class)
         ->constructor(
 
 
