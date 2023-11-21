@@ -1,8 +1,6 @@
 {
     "name": "user/create",
     "require": {
-        "tracy/tracy": "^2.10",
-        "noahbuscher/macaw": "dev-master",
         "twig/twig": "^3.7",
         "filp/whoops": "^2.15",
         "php-di/php-di": "^7.0",
