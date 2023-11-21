@@ -70,8 +70,8 @@ switch ($routeInfo[0]) {
         // ... 405 Method Not Allowed
         break;
     case FastRoute\Dispatcher::FOUND:
-        $handler = $routeInfo[1];
-        $vars = $routeInfo[2];
+        $controller = $routeInfo[1];
+        $parameters = $routeInfo[2];
 // ... call $handler with $vars
         $bootstrap->call($controller, $parameters);
         break;

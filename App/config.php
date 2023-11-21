@@ -63,6 +63,8 @@ return [
         ->constructor(get('OpisModel')),
     Ebog\FrontendController::class => create( App\FrontEndController::class)
         ->constructor(
+
+
             get('FrontView'),
             get('Model')
 
