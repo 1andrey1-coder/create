@@ -1,0 +1,31 @@
+header{
+    background-color: #0F2C59;
+    color: #F8F0E5;
+    padding: 10px;
+}
+.sleva {
+    width: 50%;
+    background: #DAC0A3;
+    float: right;
+    margin: 10px;
+    padding: 10px;
+    font-size: 15px;
+}
+.sprava {
+    text-align: left;
+    width: 40%;
+    float: left;
+    margin: 10px;
+    padding: 10px;
+    font-size: 15px;
+    background: #DAC0A3;
+}
+body{
+    background-color: #F8F0E5;
+    height: 500px;
+}
+img{
+    height: 250px;
+}
+
+
