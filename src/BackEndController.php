@@ -19,6 +19,68 @@ class BackEndController
         $this->model = new \App\Model();
         $this->view = new  \App\BackEndView();
     }
+
+    public function EditStat($id)
+    {
+        $article = $this->model->getArticleByID($id);
+        $this->view->showEdit($article);
+    }
+    public function SaveStat()
+    {
+
+    }
+    public  function UpdateStat()
+    {
+        if(isset($_POST['btnOk']))
+        { //unset($_POST['btnOk']);
+            $arrs = $this->model->getArticles();
+            if(isset($_POST['idEdit']))
+            {
+                $arrs[$_POST['idEdit']]['title'] = $_POST['inputTitle'];
+                $arrs[$_POST['idEdit']]['content'] = $_POST['inputContent'];
+                //unset($_GET['idEdit']);
+            }
+            else{
+                $id = end($arrs);
+                $arr2 = array('id' => ++$id['id'],
+                    'title' => $_POST['inputTitle'],
+                    'image' => '',
+                    'content' => $_POST['inputContent']);
+                array_push($arrs, $arr2);
+            }
+            file_put_contents('asd.json', json_encode($arrs));
+        }
+        \Ebog\Helper::goUrl('/admin');
+    }
+    public function DeleteStat($id)
+    {
+        if (isset($id)) {
+            $arr = $this->model->getArticles();
+            //dd($arr);
+            unset($arr[$id]);
+            // dd($arr);
+            file_put_contents('asd.json', json_encode($arr));
+            h::goUrl('/admin');
+        }
+    }
+
+    public function auth()
+    {
+        if (!isset($_POST['btnLogin'])) {
+            $this->LoginView();
+            exit;
+        } else {
+            if ($this->checkLogin($_POST['login'], $_POST['password'])) {
+                $_SESSION['user'] = 'admin';
+                //echo 'Вы залогинелись';
+                h::goUrl('/admin');
+            } else {
+                h::goUrl('/admin');
+            };
+        }
+    }
+
+
     public function articleList()
     {
         $articles = $this->model->getArticles();

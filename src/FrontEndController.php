@@ -14,7 +14,7 @@ class FrontEndController
     private \App\Model $model;
     private \App\View $view;
 
-    public function __construct()
+    public function __construct(FrontEndView $view, $model)
     {
         $this->model = new \App\Model();
         $this->view = new  \App\View();
@@ -28,7 +28,7 @@ class FrontEndController
 
     public function contentArticle($id)
     {
-        $article = $this->model->getArticleById((int)$id);
+        $article = $this->model->getArticleById($id);
         $this->view->showSingleArticle($article);
     }
 
@@ -42,29 +42,7 @@ class FrontEndController
         $this->view->showAdminPanel();
     }
 
-//    public function Login()
-//    {
-//        if (!isset($_POST['btnLogin'])) {
-//            echo $this->twig->render('login-panel');
-////        echo 'Pipi';
-////        include 'register/login.php';
-//        } else {
-//            if (checkLogin($_POST['login'], $_POST['password'])) {
-//                $_SESSION['user'] = 'admin';
-////                include 'admin/admin.php';
-////                echo 'четко';
-//            } else {
-//                $_SESSION['user'] = 'user';
-////            include 'template/frontend/layout.twig';
-////            echo 'новости';
-//            }
-//        }
-//    }
 
-//    public function Login()
-//    {
-//        $this->view->Obratno();
-//    }
 
 
 }
