@@ -23,7 +23,7 @@ $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $r)
     $r->addRoute('GET', '/pdo/{id}', ['App\PDOFrontEntControler','PdoOne']);
     //state
     $r->addRoute('GET', 'article/', ['App\FrontEndController','articleList']);
-    $r->addRoute('GET', '/article/{id}', ['App\FrontEndController ','contentArticle']);
+    $r->addRoute('GET', '/article/{id}', ['App\FrontEndController','contentArticle']);
 
     // admin
     $r->addRoute('GET', '/admin', ['App\BackEndController','showAdminPanel']);

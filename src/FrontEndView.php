@@ -10,7 +10,6 @@ class FrontEndView
 
     public function __construct($twig)
     {
-//        $this->loader = $loader;
         $this->twig = $twig;
     }
 

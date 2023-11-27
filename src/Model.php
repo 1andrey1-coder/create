@@ -9,7 +9,7 @@ namespace App
         {
             return json_decode(file_get_contents(filename: 'art.json'), associative: true);
         }
-        public function getArticleById(int $id): array
+        public function getArticleById(string $id): array
         {
             $articleList = $this->getArticles();
             $currentArticle = [];
