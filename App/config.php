@@ -23,24 +23,7 @@ return [
     'Model'=> create(\App\Model::class),
     'BackView' => create(\App\BackEndView::class)
         ->constructor(get('BackTwig', [])),
-    //'OpisConn'=>create(Connection::class)
-    //->constructor(get($connectionOpis)),
-//    'OpisConnection' => function( ){
-//        $connectionOpis = new Connection(
-//            $_ENV['DB_DSN'],
-//            $_ENV['DB_USERNAME'],
-//            $_ENV['DB_PASSWORD']);
-//        $connectionOpis->options([
-//            PDO::FETCH_ASSOC=>true,
-//            PDO::ATTR_STRINGIFY_FETCHES=> false]);
-//        return $connectionOpis;
-//    },
-//    'OpisDB'=>create(Database::class)
-//        ->constructor(get('OpisConnection')),
-//    'OpisModel'=>create(\App\OpisModel::class)
-//        ->constructor(get('OpisDB')),
-//    'OpisFrontCntrl'=>create(\App\OpisFrontEndController::class)
-//        ->constructor(get('OpisModel')),
+
     'PDO'=>function(){
         $opt = [
             PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,

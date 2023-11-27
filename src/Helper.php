@@ -5,9 +5,6 @@ namespace App;
 
 class Helper
 {
-
-
-
     public static function dd($some)
     {
         echo '<pre>';

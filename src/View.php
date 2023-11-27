@@ -32,15 +32,9 @@ class View
         echo $this->twig->render('layout.twig');
     }
 
-    public function showLoginPanel()
-    {
-        echo $this->twig->render('login-panel.twig');
-    }
 
-    public function showAdminPanel()
-    {
-        echo $this->twig->render('admin-panel.twig');
-    }
+
+
 
 
 

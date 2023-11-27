@@ -16,8 +16,8 @@ class BackEndController
     public function __construct($model, $view)
     {
 
-        $this->model = new \App\Model();
-        $this->view = new  \App\BackEndView();
+        $this->model =$model;
+        $this->view = $view;
     }
 
     public function EditStat($id)

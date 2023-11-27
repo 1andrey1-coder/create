@@ -10,14 +10,13 @@ use App\Helper as h;
 
 class FrontEndController
 {
-
     private \App\Model $model;
-    private \App\View $view;
+    private FrontEndView $view;
 
     public function __construct(FrontEndView $view, $model)
     {
-        $this->model = new \App\Model();
-        $this->view = new  \App\View();
+        $this->model = $model;
+        $this->view = $view;
     }
 
     public function articleList()

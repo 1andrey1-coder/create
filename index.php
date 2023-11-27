@@ -25,13 +25,12 @@ $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $r)
     $r->addRoute('GET', 'article/', ['App\FrontEndController','articleList']);
     $r->addRoute('GET', '/article/{id}', ['App\FrontEndController ','contentArticle']);
     // admin
-
     $r->addRoute('GET', '/admin', ['App\BackEndController','showAdminPanel']);
     $r->addRoute('POST', '/admin', ['App\BackEndController','Login']);
-    $r->addRoute('GET', '/admin/edit/(:num)', ['App\BackEndController','EditStat']);
-    $r->addRoute('GET', '/admin/delete/(:num)', ['App\BackEndController','DeleteStat']);
-    $r->addRoute('GET', '/admin/update', ['App\BackEndController','UpdateStat']);
-    $r->addRoute('GET', '/admin/save/(:num)', ['App\BackEndController','SaveStat']);
+//    $r->addRoute('GET', '/admin/edit/(:num)', ['App\BackEndController','EditStat']);
+//    $r->addRoute('GET', '/admin/delete/(:num)', ['App\BackEndController','DeleteStat']);
+//    $r->addRoute('GET', '/admin/update', ['App\BackEndController','UpdateStat']);
+//    $r->addRoute('GET', '/admin/save/(:num)', ['App\BackEndController','SaveStat']);
 });
 $httpMethod = $_SERVER['REQUEST_METHOD'];
 $uri = $_SERVER['REQUEST_URI'];
