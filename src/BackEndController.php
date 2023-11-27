@@ -73,9 +73,9 @@ class BackEndController
             if ($this->checkLogin($_POST['login'], $_POST['password'])) {
                 $_SESSION['user'] = 'admin';
                 //echo 'Вы залогинелись';
-                h::goUrl('/admin');
+                h::goUrl('/state');
             } else {
-                h::goUrl('/admin');
+                h::goUrl('/state');
             };
         }
     }

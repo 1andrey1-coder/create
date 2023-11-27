@@ -27,10 +27,7 @@ class View
         echo $this->twig->render('single-page.twig', ['article' => $article]);
     }
 
-    public function ObratnoNews()
-    {
-        echo $this->twig->render('layout.twig');
-    }
+
 
 
 

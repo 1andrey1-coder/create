@@ -31,6 +31,8 @@ class FrontEndController
         $this->view->showSingleArticle($article);
     }
 
+
+
     public function LoginView()
     {
         $this->view->showLoginPanel();
