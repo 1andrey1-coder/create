@@ -3,11 +3,11 @@
 
 namespace App;
 
-use Ebog\Helper as h;
+use App\Helper as h;
 
 class PDOFrontEntControler
 {
-    private \Ebog\ModelPDO $pdomodel;
+    private App\ModelPDO $pdomodel;
     public  function __construct($pdomodel)
     {
         $this->pdomodel = $pdomodel;

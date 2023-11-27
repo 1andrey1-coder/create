@@ -4,13 +4,13 @@ declare(strict_types=1);
 namespace App;
 
 use App\Model;
-use App\View;
+use App\FrontEndView;
 use App\Helper as h;
 
 
 class FrontEndController
 {
-    private \App\Model $model;
+    private Model $model;
     private FrontEndView $view;
 
     public function __construct(FrontEndView $view, $model)
@@ -36,10 +36,7 @@ class FrontEndController
         $this->view->showLoginPanel();
     }
 
-    public function AdminView()
-    {
-        $this->view->showAdminPanel();
-    }
+
 
 
 

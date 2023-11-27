@@ -81,18 +81,6 @@ class BackEndController
     }
 
 
-    public function articleList()
-    {
-        $articles = $this->model->getArticles();
-        $this->view->showArticleList($articles);
-    }
-
-    public function contentArticle($id)
-    {
-        $article = $this->model->getArticleById((int)$id);
-        $this->view->showSingleArticle($article);
-    }
-
     public function LoginView()
     {
         $this->view->showLoginPanel();

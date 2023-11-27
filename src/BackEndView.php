@@ -22,15 +22,11 @@ class BackEndView
         echo $this->twig->render('blog.twig', ['articles' => $articles]);
     }
 
-    public function showSingleArticle($article)
-    {
-        echo $this->twig->render('single-page.twig', ['article' => $article]);
-    }
 
-    public function LoginObrat(array $articles)
-    {
-        echo $this->twig->render('layout.twig', ['articles' => $articles]);
-    }
+//    public function LoginObrat(array $articles)
+//    {
+//        echo $this->twig->render('layout.twig', ['articles' => $articles]);
+//    }
 
     public function showLoginPanel()
     {
