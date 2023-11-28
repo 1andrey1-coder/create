@@ -7,8 +7,6 @@ $whoops = new \Whoops\Run;
 $whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
 $whoops->register();
 
-
-
 use FastRoute\Dispatcher;
 use PhpBench\Attributes as Bench;
 
@@ -17,20 +15,14 @@ $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $r)
 {
     //Log
     $r->addRoute('GET', '/', ['App\FrontEndController','LoginView' ]);
-
-
     //login
     $r->addRoute('POST', '/login', ['App\BackEndController','Login']);
     //xtn
     $r->addRoute('GET', '/pdo', ['App\PDOFrontEntControler','Pdoi']);
     $r->addRoute('GET', '/pdo/{id}', ['App\PDOFrontEntControler','PdoOne']);
     //state
-
-
-    $r->addRoute('GET', '/layout', ['App\FrontEndController','state']);
-    $r->addRoute('GET', 'article/', ['App\FrontEndController','articleList']);
+    $r->addRoute('GET', '/layout', ['App\FrontEndController','articleList']);
     $r->addRoute('GET', '/article/{id}', ['App\FrontEndController','contentArticle']);
-
     // admin
     $r->addRoute('GET', '/admin', ['App\BackEndController','showAdminPanel']);
 
