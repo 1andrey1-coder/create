@@ -28,6 +28,12 @@ class BackEndView
 //        echo $this->twig->render('layout.twig', ['articles' => $articles]);
 //    }
 
+
+    public function showAdd()
+    {
+        echo $this->twig->render('page-add-state.twig');
+    }
+
     public function showLoginPanel()
     {
         echo $this->twig->render('login-panel.twig');

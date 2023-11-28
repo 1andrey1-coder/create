@@ -79,7 +79,10 @@ class BackEndController
             };
         }
     }
-
+    public function ShowAdd()
+    {
+        $this->view->showAdd();
+    }
 
     public function LoginView()
     {

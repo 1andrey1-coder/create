@@ -25,6 +25,7 @@ $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $r)
     $r->addRoute('GET', '/article/{id}', ['App\FrontEndController','contentArticle']);
     // admin
     $r->addRoute('GET', '/admin', ['App\BackEndController','showAdminPanel']);
+    $r->addRoute('GET', '/admin/add', ['App\BackEndController','ShowAdd']);
 
 });
 $httpMethod = $_SERVER['REQUEST_METHOD'];

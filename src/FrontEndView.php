@@ -22,21 +22,21 @@ class FrontEndView
         echo $this->twig->render('single-page.twig', ['article' => $article]);
     }
 
-    public function ObratnoNews()
-    {
-        echo $this->twig->render('layout.twig');
-    }
+
 
     public function showLoginPanel()
     {
         echo $this->twig->render('login-panel.twig');
     }
-
-    public function showAdminPanel()
-    {
-        echo $this->twig->render('admin-panel.twig');
-    }
-
+//
+//    public function showAdminPanel()
+//    {
+//        echo $this->twig->render('admin-panel.twig');
+//    }
+//    public function ObratnoNews()
+//    {
+//        echo $this->twig->render('layout.twig');
+//    }
 
 
     public function Error()
