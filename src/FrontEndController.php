@@ -31,7 +31,11 @@ class FrontEndController
         $this->view->showSingleArticle($article);
     }
 
-
+    public  function  state()
+    {
+        $articles = $this->model->getArticles();
+        $this->view->ObratnoNews($articles);
+    }
 
     public function LoginView()
     {
