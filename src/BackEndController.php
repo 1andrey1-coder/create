@@ -63,7 +63,6 @@ class BackEndController
             h::goUrl('/admin');
         }
     }
-
     public function auth()
     {
         if (!isset($_POST['btnLogin'])) {
@@ -84,14 +83,15 @@ class BackEndController
         $this->view->showAdd();
     }
 
+
     public function LoginView()
     {
         $this->view->showLoginPanel();
     }
-
     public function showAdminPanel()
     {
-        $this->view->AdminView();
+        $article = $this->model->getArticles();
+        $this->view->AdminView($article);
     }
 
 
@@ -128,7 +128,11 @@ class BackEndController
         }
     }
 
-
+//    public function articleList()
+//    {
+//        $articles = $this->model->getArticles();
+//        $this->view->showArticleList($articles);
+//    }
 
 
 

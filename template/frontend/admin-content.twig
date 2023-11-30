@@ -1,0 +1,17 @@
+{% extends "admin-panel.twig" %}
+
+
+{% block TableState %}
+    {% for article in articles %}
+        <tr>
+            <th >{{ article.id }}</th>
+            <td>{{ article.title }}</td>
+            <td> <img style="width: 100%; height: 200px; " src="{{ article.image }}" alt="" class="img-fluid"></td>
+        </tr>
+
+
+
+
+
+    {% endfor %}
+{% endblock %}

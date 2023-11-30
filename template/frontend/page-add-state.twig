@@ -185,10 +185,14 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Editor</h5>
+                        <form action="/admin/edit/{{ 0 }}" method="get" style="margin: 5px">
+                            <input name="btnAdd" type="submit" class="btn btn-primary" value="Добавить">
+                        </form>
+
+
                         <!-- TinyMCE Editor -->
                         <textarea class="tinymce-editor">
-                <p>Hello World!</p>
-                <p>This is TinyMCE <strong>full</strong> editor</p>
+
               </textarea><!-- End TinyMCE Editor -->
                     </div>
                 </div>
