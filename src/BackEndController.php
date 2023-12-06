@@ -80,9 +80,21 @@ class BackEndController
     }
     public function ShowAdd()
     {
-        $this->view->showAdd();
+        $article = array('id' => 0,
+            'title' => '',
+            'image' => '',
+            'content' => '');
+        $this->view->showAdd($article);
     }
+    public function Save($id)
+    {
+        //$arrs = $this->model->getArticles();
 
+        $arrs[$_POST['idEdit']]['title'] = $_POST['inputTitle'];
+        $arrs[$_POST['idEdit']]['content'] = $_POST['inputContent'];
+
+        file_put_contents('asd.json', json_encode($arrs));
+    }
 
     public function LoginView()
     {
@@ -128,11 +140,7 @@ class BackEndController
         }
     }
 
-//    public function articleList()
-//    {
-//        $articles = $this->model->getArticles();
-//        $this->view->showArticleList($articles);
-//    }
+
 
 
 
